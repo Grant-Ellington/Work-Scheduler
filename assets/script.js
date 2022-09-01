@@ -3,13 +3,34 @@
 
 //using moment.js find a way to add in the current date and time and add to the header
 
-const clock = document.getElementById('clock') 
+const clock = document.getElementById('clock')
+const loadTime = moment() 
+const hour = {
+    nineAM: moment(9),
+    tenAM: moment(10),
+    elevenAM: moment(11),
+    twelvePM: moment(12),
+    onePM: moment(13),
+    twoPM: moment(14),
+    threePM: moment(15),
+    fourPM: moment(16),
+    fivePM: moment(17),
 
-setInterval(()=> {
+}
+
+
+setInterval( () => {
     const now = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-    clock.textContent = now
+    clock.textContent = now   
 },1000)
 
+if( moment(loadTime).isSame(nineAM)){
+    console.log('bullshit')
+} else if ( moment(loadTime).isBefore(nineAM)){
+    console.log('before')
+}else {
+    console.log('after')
+}
 // using moment.js find a way to to target time and change the background property with past, current and future markers
 // Past will be red, current will be green; future will be white
 
