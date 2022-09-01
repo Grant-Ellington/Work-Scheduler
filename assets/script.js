@@ -24,12 +24,14 @@ setInterval( () => {
     clock.textContent = now   
 },1000)
 
+var div = document.getElementById('nineAM')
+
 if( moment(loadTime).isSame(nineAM)){
-    console.log('bullshit')
+    div.setAttribute("style", "background: green");
 } else if ( moment(loadTime).isBefore(nineAM)){
-    console.log('before')
+    div.setAttribute("style", "background: red")
 }else {
-    console.log('after')
+    div.setAttribute("style", "background: yellow")
 }
 // using moment.js find a way to to target time and change the background property with past, current and future markers
 // Past will be red, current will be green; future will be white
