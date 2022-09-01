@@ -120,6 +120,24 @@ if( moment(loadTime).isSame(fivePM)){
 }else {
     divFivePM.setAttribute("style", "background: yellow")
 }
+
+
+var saveBTN = document.getElementById('saveBtn')
+var eventNineAm = document.querySelector('#event9AM')
+console.log(eventNineAm)
+
+saveBTN.addEventListener('click', function (event) { 
+    event.preventDefault()
+
+
+var event = {
+    NineAMEvent: eventNineAm.value.trim(),
+}
+
+
+
+localStorage.setItem('event', JSON.stringify(event))})
+
 // using moment.js find a way to to target time and change the background property with past, current and future markers
 // Past will be red, current will be green; future will be white
 
