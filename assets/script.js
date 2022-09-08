@@ -128,34 +128,212 @@ if( loadTime === hour.fivePM){
     divFivePM.setAttribute("style", "background: yellow")
 }
 
-
-// get items from textarea and put in local storage.
-
-
-let task = [];
-
-let inputs = document.querySelectorAll(
-        '#eventNineAM',
-        '#eventTenAM',
-        '#eventElevenAM',
-        '#eventTwelveAM',
-        '#eventOnePM',
-        '#eventTwoPM',
-        '#eventThreePM',
-        '#eventFourPM',
-        '#eventFivePM'
-        )
-
-inputs.forEach(function (element) {
-    task.push({
-        field: element.id,
-        text: element.querySelector('.form-control').value,
-        })
-        console.log(task)
-    })
+console.log(localStorage)
 
 
+// Saving todos For 0900
+const eventNineAM = document.getElementById('eventNineAM');
+const saveBtnNineAM = document.getElementById('saveBtnNineAM');
 
+saveBtnNineAM.onclick = function saveTextNineAM () {
+    var taskNineAM = eventNineAM.value;
 
-//ounce in  local storage parse and set to text Content
-// ounce completed figure out how to save eithout reloaading 
+    console.log(taskNineAM);
+
+    if (taskNineAM) {
+        localStorage.setItem('todoNineAM', taskNineAM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventNineAM.append(localStorage.todoNineAM)
+if (eventNineAM === 'undefined') {
+    eventNineAM.innerText = "";
+} else {
+    eventNineAM.innerText = localStorage.todoNineAM
+    console.log('true')
+}
+
+//saving todos for 1000
+
+const eventTenAM = document.getElementById('eventTenAM');
+const saveBtnTenAM = document.getElementById('saveBtnTenAM');
+
+saveBtnTenAM.onclick = function saveTextTenAM () {
+    var taskTenAM = eventTenAM.value;
+
+    console.log(taskTenAM);
+
+    if (taskTenAM) {
+        localStorage.setItem('todoTenAM', taskTenAM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventTenAM.append(localStorage.todoTenAM)
+if (eventTenAM) {
+    eventTenAM.innerText = localStorage.todoTenAM
+} else {
+    eventTenAM.innerText = "";
+}
+
+// 1100
+
+const eventElevenAM = document.getElementById('eventElevenAM');
+const saveBtnElevenAM = document.getElementById('saveBtnElevenAM');
+
+saveBtnElevenAM.onclick = function saveTextElevenAM () {
+    var taskElevenAM = eventElevenAM.value;
+
+    console.log(taskElevenAM);
+
+    if (taskElevenAM) {
+        localStorage.setItem('todoElevenAM', taskElevenAM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventElevenAM.append(localStorage.todoElevenAM)
+if (eventElevenAM) {
+    eventNineAM.innerText = localStorage.todoElevenAM
+} else {
+    eventNineAM.innerText = "";
+}
+
+// for 1200
+
+const eventTwelvePM = document.getElementById('eventTwelvePM');
+const saveTwelvePM = document.getElementById('saveBtnTwelvePM');
+
+saveBtnTwelvePM.onclick = function saveTextTwelvePM () {
+    var taskTwelvePM = eventTwelvePM.value;
+
+    console.log(taskTwelvePM);
+
+    if (taskTwelvePM) {
+        localStorage.setItem('todoTwelvePM', taskTwelvePM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventTwelvePM.append(localStorage.todoTwelvePM)
+if (eventTwelvePM) {
+    eventTwelvePM.innerText = localStorage.todoTwelvePM
+} else {
+    eventTwelvePM.innerText = "";
+}
+
+// for 1300
+
+const eventOnePM = document.getElementById('eventOnePM');
+const saveBtnOnePM = document.getElementById('saveBtnOnePM');
+
+saveBtnOnePM.onclick= function saveTextOnePM () {
+    var taskOnePM = eventOnePM.value;
+
+    console.log(taskOnePM);
+
+    if (taskOnePM) {
+        localStorage.setItem('todoOnePM', taskOnePM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventOnePM.append(localStorage.todoOnePM)
+if (eventOnePM) {
+    eventOnePM.innerText = localStorage.todoOnePM
+} else {
+    eventOnePM.innerText = "";
+}
+
+// 1400
+
+const eventTwoPM = document.getElementById('eventTwoPM');
+const saveBtnTwoPM = document.getElementById('saveBtnTwoPM');
+
+saveBtnTwoPM.onclick= function saveTextTwoPM () {
+    var taskTwoPM = eventTwoPM.value;
+
+    console.log(taskTwoPM);
+
+    if (taskTwoPM) {
+        localStorage.setItem('todoTwoPM', taskTwoPM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventTwoPM.append(localStorage.todoTwoPM)
+if (eventTwoPM) {
+    eventTwoPM.innerText = localStorage.todoTwoPM
+} else {
+    eventTwoPM.innerText = "";
+}
+
+//1500
+
+const eventThreePM = document.getElementById('eventThreePM');
+const saveBtnThreePM = document.getElementById('saveBtnThreePM');
+
+saveBtnThreePM.onclick= function saveTextThreePM () {
+    var taskTwoPM = eventThreePM.value;
+
+    console.log(taskThreePM);
+
+    if (taskThreePM) {
+        localStorage.setItem('todoTwoPM', taskThreePM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventThreePM.append(localStorage.todoThreePM)
+if (eventThreePM) {
+    eventThreePM.innerText = localStorage.todoThreePM
+} else {
+    eventThreePM.innerText = "";
+}
+
+//1600
+
+const eventFourPM = document.getElementById('eventFourPM');
+const saveBtnFourPM = document.getElementById('saveBtnFourPM');
+
+saveBtnFourPM.onclick= function saveTextFourPM () {
+    var taskFourPM = eventFourPM.value;
+
+    console.log(taskFourPM);
+
+    if (taskFourPM) {
+        localStorage.setItem('todoFourPM', taskFourPM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventFourPM.append(localStorage.todoFourPM)
+if (eventFourPM) {
+    eventFourPM.innerText = localStorage.todoFourPM
+} else {
+    eventFourPM.innerText = "";
+}
+
+//1700
+
+const eventFivePM = document.getElementById('eventFivePM');
+const saveBtnFivePM = document.getElementById('saveBtnFivePM');
+
+saveBtnTwoPM.onclick= function saveTextFivePM () {
+    var taskFivePM = eventFivePM.value;
+
+    console.log(taskFivePM);
+
+    if (taskFivePM) {
+        localStorage.setItem('todoFivePM', taskFivePM);
+    }
+    //eventNineAM.append(localStorage.todoNineAM)
+    
+}
+eventFivePM.append(localStorage.todoFivePM)
+if (eventFivePM) {
+    eventFivePM.innerText = localStorage.todoFivePM
+} else {
+    eventFivePM.innerText = "";
+}
